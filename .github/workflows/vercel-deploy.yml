@@ -28,6 +28,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     outputs:
       deployment-url: ${{ steps.deploy.outputs.url }}
       deployment-status: ${{ steps.deploy.outputs.status }}
